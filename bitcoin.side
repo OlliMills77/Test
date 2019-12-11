@@ -1,0 +1,541 @@
+{
+  "id": "5f9abb5c-e1c0-4aa4-a47b-01189369e34b",
+  "version": "2.0",
+  "name": "bitcoin",
+  "url": "http:/bitcoin-trader-app.com.unilanding.test.unilanding.stacks.filiatix.com/r?hash=MEPIE",
+  "tests": [{
+    "id": "680c33f7-495f-4a6e-bd1d-e09b5341c40e",
+    "name": "test555",
+    "commands": [{
+      "id": "23da96f8-2a62-461e-a8e4-c93d8b55425f",
+      "comment": "",
+      "command": "open",
+      "target": "/u/124a0a001ee0721ffa7b",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "071ec209-7874-417e-bd98-0fb7c056b2fa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ad41cb0-c23f-4c4b-962b-d2e45c27b644",
+      "comment": "открыть модалку privacy",
+      "command": "click",
+      "target": "id=privacy-policy",
+      "targets": [
+        ["id=privacy-policy", "id"],
+        ["linkText=Политика конфиденциальности", "linkText"],
+        ["css=#privacy-policy", "css:finder"],
+        ["xpath=//a[contains(text(),'Политика конфиденциальности')]", "xpath:link"],
+        ["xpath=//a[@id='privacy-policy']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'javascript:;')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Политика конфиденциальности')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5869a70b-b154-4de4-bb64-9d60e71db472",
+      "comment": "закрыть форму регистрации",
+      "command": "click",
+      "target": "css=.visible > .btn_close",
+      "targets": [
+        ["css=.visible > .btn_close", "css:finder"],
+        ["xpath=//body/div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19851e51-e0ab-4f65-98d6-9f2f9f9b8efe",
+      "comment": "",
+      "command": "//assert element present",
+      "target": "data-src=\"/pages/terms.html\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec9947f3-691e-489d-8d23-cae193cae62e",
+      "comment": "открыть модалку terms",
+      "command": "click",
+      "target": "id=terms",
+      "targets": [
+        ["id=terms", "id"],
+        ["linkText=Условия", "linkText"],
+        ["css=#terms", "css:finder"],
+        ["xpath=//a[contains(text(),'Условия')]", "xpath:link"],
+        ["xpath=//a[@id='terms']", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[2]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Условия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d123bb80-9aef-4526-b2b8-15640e88ff01",
+      "comment": "закрыть модалку terms",
+      "command": "clickAt",
+      "target": "css=.visible > .btn_close",
+      "targets": [
+        ["css=.popbox:nth-child(19) > .btn_close", "css:finder"],
+        ["xpath=//div[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f38fbd4e-7172-4f23-a50f-9753223f4c36",
+      "comment": "Проверка на наличие красного предупреждения в верху экрана",
+      "command": "assertElementPresent",
+      "target": "css=.intro-p",
+      "targets": [
+        ["css=.intro-p", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'ПРЕДУПРЕЖДЕНИЕ:В связи с чрезвычайно высокой востребованностью со стороны общественности мы закроем регистрацию, начиная с 28/11/2019 - ПОТОРОПИТЕСЬ! 02:12')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d99da80a-0b75-42b2-aebd-37ff4a422e59",
+      "comment": "наличие логитипа ",
+      "command": "assertElementPresent",
+      "target": "css=.inline-block",
+      "targets": [
+        ["css=.inline-block", "css:finder"],
+        ["xpath=//img[@alt='BitcoinTrader']", "xpath:img"],
+        ["xpath=//section[@id='top']/header/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d62aba0-9c37-47c7-83bf-ad45053a75a4",
+      "comment": "Наличие значка валюты в виджете в правом верхнем углу",
+      "command": "assertElementPresent",
+      "target": "css=h3 > span:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2fc86f5-9735-4cc9-ad6c-b920b741e574",
+      "comment": "Наличие фото в виджете",
+      "command": "assertElementPresent",
+      "target": "css=.img-circle",
+      "targets": [
+        ["css=.img-circle", "css:finder"],
+        ["xpath=//img[@alt='Notification Photo']", "xpath:img"],
+        ["xpath=//div[@id='exampleNames']/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4531ea9c-3339-4a40-a7af-aa79d15a55d3",
+      "comment": "Наличие суммы заработка в виджете",
+      "command": "assertElementPresent",
+      "target": "css=h3 > span:nth-child(1)",
+      "targets": [
+        ["css=h3 > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='exampleNames']/div/div[2]/h3/span", "xpath:idRelative"],
+        ["xpath=//h3/span", "xpath:position"],
+        ["xpath=//span[contains(.,'751')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de91b5a9-9bef-4b17-903e-5a7aa78477b8",
+      "comment": "Наличие иджета",
+      "command": "assertElementPresent",
+      "target": "css=.notification-top",
+      "targets": [
+        ["css=.notification-top", "css:finder"],
+        ["xpath=//div[@id='exampleNames']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c969810-8bb0-47da-8126-c6ffae36b29f",
+      "comment": "Наличие флага",
+      "command": "assertElementPresent",
+      "target": "css=.flag-wrapper > img",
+      "targets": [
+        ["css=.flag-wrapper > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://restcountries.eu/data/ukr.svg')]", "xpath:img"],
+        ["xpath=//section[@id='top']/header/div/div/div[2]/div/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e65084b6-fbf3-4e3a-831c-74120e593f96",
+      "comment": "Нажать кнопку ДАльше",
+      "command": "click",
+      "target": "css=.btn-formnav > span",
+      "targets": [
+        ["css=.btn-formnav > span", "css:finder"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[5]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ДАЛЬШЕ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "005e48c4-8bc9-4c42-b121-85807d8f722d",
+      "comment": "Ожидание валидаци This field is required.",
+      "command": "assertText",
+      "target": "id=name-error",
+      "targets": [],
+      "value": "This field is required."
+    }, {
+      "id": "458f7dd6-d750-4c99-85bf-fbd3130fbfc9",
+      "comment": "Ожидание валидаци This field is required.",
+      "command": "assertText",
+      "target": "id=lastname-error",
+      "targets": [
+        ["id=lastname-error", "id"],
+        ["css=#lastname-error", "css:finder"],
+        ["xpath=//label[@id='lastname-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[3]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/label", "xpath:position"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "cfaef57d-d73a-4864-9bbd-cb6685334c68",
+      "comment": "Ожидание валидаци This field is required.",
+      "command": "assertText",
+      "target": "id=email-error",
+      "targets": [
+        ["id=email-error", "id"],
+        ["css=#email-error", "css:finder"],
+        ["xpath=//label[@id='email-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[4]/label", "xpath:idRelative"],
+        ["xpath=//div[4]/label", "xpath:position"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "f9e48299-7f83-453d-bc77-dc0e007aedde",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "883de092-abf4-47c7-8fdc-b9e1572ec10c",
+      "comment": "ввод невалидных данных в поле name",
+      "command": "sendKeys",
+      "target": "name=name",
+      "targets": [],
+      "value": "r"
+    }, {
+      "id": "d016f369-2d05-44b8-a2bc-519ce69866d2",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c8bdf38-2143-48d7-ba0d-23c14eac0296",
+      "comment": "Наличие валидации",
+      "command": "assertElementPresent",
+      "target": "xpath=//label[contains(.,'2 characters minimum, no numbers and special characters')]",
+      "targets": [
+        ["id=name-error", "id"],
+        ["css=#name-error", "css:finder"],
+        ["xpath=//label[@id='name-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[2]/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'2 characters minimum, no numbers and special characters')]", "xpath:innerText"]
+      ],
+      "value": "2 characters minimum, no numbers and special characters"
+    }, {
+      "id": "7e83c600-f8f6-4391-90f6-a1d84b21373f",
+      "comment": "ввод невалидных данных в поле lastname",
+      "command": "sendKeys",
+      "target": "name=lastname",
+      "targets": [],
+      "value": "r"
+    }, {
+      "id": "632c04d6-3b6d-4bbb-a96e-2cf87b190d6a",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f77c4be-02c2-4731-8b5a-bdd9c568d02a",
+      "comment": "валидация",
+      "command": "assertText",
+      "target": "id=lastname-error",
+      "targets": [
+        ["id=lastname-error", "id"],
+        ["css=#lastname-error", "css:finder"],
+        ["xpath=//label[@id='lastname-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[3]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'This field is required.')]", "xpath:innerText"]
+      ],
+      "value": "2 characters minimum, no numbers and special characters"
+    }, {
+      "id": "f2622cbf-a600-4ad0-a3fc-f06f12fbbfda",
+      "comment": "Ввод невалидных данных в поле email",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [],
+      "value": "f"
+    }, {
+      "id": "fe17e1d2-f635-48f2-876e-d5caf9d75d44",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-formnav > span",
+      "targets": [
+        ["css=.btn-formnav > span", "css:finder"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[5]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ДАЛЬШЕ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "297883f6-79d9-4a74-9546-695be0e74b43",
+      "comment": "Ожидание валидации",
+      "command": "assertText",
+      "target": "id=email-error",
+      "targets": [
+        ["id=email-error", "id"],
+        ["css=#email-error", "css:finder"],
+        ["xpath=//label[@id='email-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[4]/label", "xpath:idRelative"],
+        ["xpath=//div[4]/label", "xpath:position"]
+      ],
+      "value": "Please enter a valid email address."
+    }, {
+      "id": "3d042bdf-4b3e-478f-88c6-6fdbcd082dd0",
+      "comment": "ввод валида данных имя",
+      "command": "sendKeys",
+      "target": "name=name",
+      "targets": [],
+      "value": "gg"
+    }, {
+      "id": "5f311b70-f82e-4abe-aab5-d75550b37e0d",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "657e9212-6061-462b-a314-8df2a163092e",
+      "comment": "ввод валид даннях фамилия",
+      "command": "sendKeys",
+      "target": "name=lastname",
+      "targets": [],
+      "value": "gg"
+    }, {
+      "id": "3a856943-b102-4d68-b146-ff43c84ba6de",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.error:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e50e4ec-28aa-4659-ad29-782f81b71805",
+      "comment": "",
+      "command": "//storeText",
+      "target": "name=email",
+      "targets": [],
+      "value": "e-mail"
+    }, {
+      "id": "5f107a16-c140-403d-8b59-266da043b0df",
+      "comment": "генерация произвольного e-mail",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(2, 15) + \"@gmail.com\"",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "f6ac5d10-ed61-4951-ada2-ea329292377d",
+      "comment": "ввод сгенерированного e-mail",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [],
+      "value": "${email}"
+    }, {
+      "id": "332b5ddb-b8bd-4e30-b6cf-b661711fe3ae",
+      "comment": "нажать кнопку дальше",
+      "command": "click",
+      "target": "css=.btn-formnav",
+      "targets": [
+        ["css=.btn-formnav", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ДАЛЬШЕ >')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa13c4a8-1c9d-46d8-a215-d63e82f160b0",
+      "comment": "нажать submit",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css:finder"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7d6506e-0b3e-420a-83bf-b2ae5f343913",
+      "comment": "ожидание валидации this field is required",
+      "command": "assertText",
+      "target": "id=phone-number-error",
+      "targets": [
+        ["id=phone-number-error", "id"],
+        ["css=#phone-number-error", "css:finder"],
+        ["xpath=//label[@id='phone-number-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[2]/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'This field is required.')]", "xpath:innerText"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "03008856-9e56-4fd4-a996-671d6ca6d013",
+      "comment": "нажать на кнопку для выбора флага",
+      "command": "click",
+      "target": "css=.selected-flag > .iti-flag",
+      "targets": [
+        ["css=.selected-flag > .iti-flag", "css:finder"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[2]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b275ca1-d101-452e-b7a1-be5ea50de50e",
+      "comment": "выбрать флаг",
+      "command": "click",
+      "target": "css=#iti-item-tc > .country-name",
+      "targets": [
+        ["css=#iti-item-tc > .country-name", "css:finder"],
+        ["xpath=//li[@id='iti-item-tc']/span", "xpath:idRelative"],
+        ["xpath=//li[227]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Turks and Caicos Islands')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad050b77-d0a1-4170-99cc-7677d3134eee",
+      "comment": "",
+      "command": "//assert element not present",
+      "target": "id=country-listbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "791593ed-2141-40ba-9962-0ec323fca307",
+      "comment": "ввести слишком короткий номер телефона",
+      "command": "sendKeys",
+      "target": "name=phone-number",
+      "targets": [],
+      "value": "+35809"
+    }, {
+      "id": "f9053e1a-ba2d-4b95-a7b6-f36617847605",
+      "comment": "нажать submit",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css:finder"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6e41512-48aa-4d40-820c-cd69ea300ec4",
+      "comment": "Ожидание валидации",
+      "command": "assertText",
+      "target": "id=phone-number-error",
+      "targets": [
+        ["id=phone-number-error", "id"],
+        ["css=#phone-number-error", "css:finder"],
+        ["xpath=//label[@id='phone-number-error']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[2]/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Please enter a valid phone number')]", "xpath:innerText"]
+      ],
+      "value": "Please enter a valid phone number"
+    }, {
+      "id": "ff2b583e-ae19-4779-ac91-2aeda8302060",
+      "comment": "Ввести валидный номер",
+      "command": "click",
+      "target": "name=phone-number",
+      "targets": [
+        ["name=phone-number", "name"],
+        ["css=.phone-input", "css:finder"],
+        ["xpath=//input[@name='phone-number']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc9623f3-379a-4dea-87b6-c6947ec97c42",
+      "comment": "рендомный номер телефона",
+      "command": "executeScript",
+      "target": "return \"+35809\"+Math.floor(Math.random() * 1000000)",
+      "targets": [],
+      "value": "phone"
+    }, {
+      "id": "63cd4597-a42c-4c73-a1e6-9fdc327d6aaf",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone-number",
+      "targets": [
+        ["name=phone-number", "name"],
+        ["css=.phone-input", "css:finder"],
+        ["xpath=//input[@name='phone-number']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${phone}"
+    }, {
+      "id": "c676b7cb-8168-47ce-84d7-683963a08563",
+      "comment": "подтвердить отправку",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css:finder"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//section[@id='top']/div/div[3]/div[2]/div/div/div[2]/form/div/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2672ac10-cf31-47ca-8921-a66dc25a4ddd",
+    "name": "g",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["680c33f7-495f-4a6e-bd1d-e09b5341c40e"]
+  }],
+  "urls": ["http://bitcoin-trader-app.com.unilanding.demo.unilanding.stacks.filiatix.com/", "http://bitcoin-trader-app.com.unilanding.test.unilanding.stacks.filiatix.com/r", "http://bitcoin-trader-app.com.unilanding.test.unilanding.stacks.filiatix.com/r?hash=MEPIE", "http://bitcoin-circuit-app.com.unilanding.test.unilanding.stacks.filiatix.com/r?hash=MEPIE"],
+  "plugins": []
+}
